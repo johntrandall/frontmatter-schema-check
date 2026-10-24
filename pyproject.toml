@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "frontmatter-schema-check"
+version = "0.1.0"
+description = "Validate markdown frontmatter records against a per-folder JSON Schema type file (mdbase layout), as a CLI, a Claude Code hook and a pre-commit check."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = ["jsonschema>=4.18", "PyYAML>=6"]
+
+[project.scripts]
+frontmatter-schema-check = "frontmatter_schema_check:cli"
+
+[tool.setuptools]
+py-modules = ["frontmatter_schema_check"]
